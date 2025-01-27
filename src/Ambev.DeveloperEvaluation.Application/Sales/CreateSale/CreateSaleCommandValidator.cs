@@ -38,14 +38,7 @@ public class CreateSaleCommandValidator : AbstractValidator<CreateSaleCommand>
 
             item.RuleFor(i => i.UnitPrice)
                 .GreaterThanOrEqualTo(0); // Mensagem padrão: "'Unit Price' must be greater than or equal to '0'."
-
-            //item.RuleFor(i => i.Discount)
-            //    .GreaterThanOrEqualTo(0) // Mensagem padrão: "'Discount' must be greater than or equal to '0'."
-            //    .LessThanOrEqualTo(i => i.UnitPrice * i.Quantity); // Mensagem padrão: "'Discount' must be less than or equal to 'calculated value'."
-
-            //item.RuleFor(i => i.TotalItemAmount)
-            //    .GreaterThanOrEqualTo(0) // Mensagem padrão: "'Total Item Amount' must be greater than or equal to '0'."
-            //    .Must((i, totalItemAmount) => totalItemAmount == (i.UnitPrice * i.Quantity - i.Discount)); // Mensagem padrão: "The specified condition was not met for 'Total Item Amount'."
+            
         });
     }
 }
